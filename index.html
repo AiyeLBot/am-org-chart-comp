@@ -40,27 +40,43 @@
     .legend-dashed-red { width: 36px; height: 0; border-top: 2px dashed #dc2626; }
     .legend-red-text { color: #dc2626; font-weight: 600; }
     .summary-table {
-      margin-top: 12px;
+      margin-top: 16px;
       width: 100%;
-      max-width: 520px;
+      max-width: 480px;
       border-collapse: collapse;
       font-family: 'Segoe UI', Arial, sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
     .summary-table td {
-      padding: 4px 12px;
+      padding: 10px 18px;
       color: #1a2e4a;
+      border-bottom: 1px solid #edf2f7;
     }
     .summary-table td:last-child {
       text-align: right;
       font-weight: 600;
+      font-size: 0.95rem;
     }
-    .summary-table .label { color: #5a7089; font-weight: 400; }
+    .summary-table .label {
+      color: #5a7089;
+      font-weight: 400;
+    }
     .summary-table .total-row td {
-      border-top: 2px solid #1a2e4a;
-      padding-top: 6px;
+      background: #00AFA0;
+      color: white;
+      border-bottom: none;
       font-weight: 700;
-      color: #1a2e4a;
+      font-size: 1rem;
+    }
+    .summary-table .total-row td:last-child {
+      font-size: 1.1rem;
+    }
+    .summary-table tr:last-child td {
+      border-bottom: none;
     }
     footer { margin-top: 28px; font-size: 0.72rem; color: #a0b0c0; text-align: center; }
   </style>
@@ -183,19 +199,20 @@
 </svg>
 
 <!-- Summary Remarks -->
-<div style="display:flex; justify-content:center; margin-top:16px;">
+<div style="display:flex; flex-direction:column; align-items:center; margin-top:24px;">
+  <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:0.8rem; font-weight:600; color:#5a7089; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Budget Summary</div>
 <table class="summary-table">
-  <tr>
-    <td class="label">a) Total Amount of All Filled Positions</td>
-    <td>₱520,000</td>
+  <tr class="total-row">
+    <td>1. New / Proposed Budget</td>
+    <td>₱620,000</td>
   </tr>
   <tr>
-    <td class="label">b) Original Budget</td>
+    <td class="label">2. Original Budget</td>
     <td>₱560,000</td>
   </tr>
-  <tr class="total-row">
-    <td>c) New Budget (All Positions — Filled &amp; Vacant)</td>
-    <td>₱620,000</td>
+  <tr>
+    <td class="label">3. Total Amount of All Filled Positions</td>
+    <td>₱520,000</td>
   </tr>
 </table>
 </div>
